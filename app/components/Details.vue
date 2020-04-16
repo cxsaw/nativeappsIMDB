@@ -4,7 +4,9 @@
 		<StackLayout col="1" class="p-20">
 			<Label class="h1 m-b-10" :text="selected.name"></Label>
 			<Image height="200" :src="selected.src" class="thumb img-circle"></Image>
+            <Label class="body" textWrap="true" :text="selected.year"></Label>
 			<Label class="body" textWrap="true" :text="selected.synopsis"></Label>
+            <Label class="body" textWrap="true" :text="selected.rate"></Label>
 		</StackLayout>
 	</Page>
 </template>

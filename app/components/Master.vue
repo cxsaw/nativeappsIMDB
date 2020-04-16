@@ -9,7 +9,8 @@
 					<v-template>
 						<GridLayout class="list-group-item" rows="*" columns="auto, *">
 							<Image row="0" col="0" :src="item.src" class="thumb"></Image>
-							<Label row="0" col="1" :text="item.name"></Label>
+							<Label row="0" col="1" :text="item.name" class="titleList"></Label>
+                                <Label row="0" col="2" :text="item.year" style="text-align : right"></Label>
 						</GridLayout>
 					</v-template>
 				</ListView>
@@ -31,8 +32,6 @@ const isTablet =
 import Details from "./Details";
 const movie = require("../data").movie;
 
-console.log(movie);
-
 export default {
     data() {
         return { isTablet: isTablet, movie: movie, selected: {} };
@@ -44,7 +43,6 @@ export default {
             if (isTablet) {
                 this.selected = selected;
             } else {
-                // And navigate phone users.
                 this.$navigateTo(Details, {
                     props: { selected: selected }
                 });
