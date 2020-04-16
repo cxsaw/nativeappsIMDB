@@ -1,11 +1,11 @@
 <template>
 	<Page class="page">
-		<ActionBar title="Split View"></ActionBar>
+		<ActionBar title="Top 100 IMDB"></ActionBar>
  
 		<GridLayout :columns="isTablet ? '*, 2*' : '*'">
 			<GridLayout col="0" class="left-column">
  
-				<ListView class="list-group" for="item in pokemon" @itemTap="select">
+				<ListView class="list-group" for="item in movie" @itemTap="select">
 					<v-template>
 						<GridLayout class="list-group-item" rows="*" columns="auto, *">
 							<Image row="0" col="0" :src="item.src" class="thumb"></Image>
@@ -28,8 +28,10 @@
 const DeviceType = require("tns-core-modules/ui/enums").DeviceType;
 const isTablet =
     require("tns-core-modules/platform").device.deviceType == DeviceType.Tablet;
-import DetailPage from "./Details";
+import Details from "./Details";
 const movie = require("../data").movie;
+
+console.log(movie);
 
 export default {
     data() {
@@ -43,7 +45,7 @@ export default {
                 this.selected = selected;
             } else {
                 // And navigate phone users.
-                this.$navigateTo(DetailPage, {
+                this.$navigateTo(Details, {
                     props: { selected: selected }
                 });
             }
