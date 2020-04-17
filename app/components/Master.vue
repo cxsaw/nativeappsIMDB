@@ -1,6 +1,6 @@
 <template>
 	<Page class="page">
-		<ActionBar title="Top 100 IMDB V0.4"></ActionBar>
+		<ActionBar title="Top 100 IMDB V0.4-b"></ActionBar>
  
 		<GridLayout :columns="isTablet ? '*, 2*' : '*'">
 			<GridLayout col="0" class="left-column">
@@ -21,15 +21,34 @@
 				<Image height="200" :src="selected.src" class="thumb img-circle"></Image>
 				<Label class="body" textWrap="true" :text="selected.description"></Label>
 			</StackLayout>
+            <Button class="background" left="0" top="0" width="100%" height="100%"
+                @tap="toggleSearch" />
 		</GridLayout>
 	</Page>
 </template>
+<style scoped lang="scss">
+    @import '~@nativescript/theme/scss/variables/grey';
+	
+    
+    .fas {
+        @include colorize($color: accent);
+    }
+
+    .info {
+        font-size: 20;
+        horizontal-align: center;
+        vertical-align: center;
+    }
+</style>
 
 <script>
+//import Details
+import Details from "./Details";
+import AddMovie from "./AddMovie";
+
 const DeviceType = require("tns-core-modules/ui/enums").DeviceType;
 const isTablet =
     require("tns-core-modules/platform").device.deviceType == DeviceType.Tablet;
-import Details from "./Details";
 const movie = require("../data").movie;
 
 export default {
@@ -41,13 +60,21 @@ export default {
            
             const selected = movie[event.index];
             if (isTablet) {
-                this.selected = selected;
+				this.selected = selected;
+				console.log("Mode tablette - affichage du résumé");
             } else {
                 this.$navigateTo(Details, {
-                    props: { selected: selected }
-                });
+					props: { selected: selected }
+					
+				})
+				;
+				console.log("Mode Téléphone - affichage du résumé");
             }
-        }
+		},
+		toggleSearch() {
+                this.$navigateTo(AddMovie);
+                console.log("Ajout d'un film");
+            }
     }
 };
 </script>

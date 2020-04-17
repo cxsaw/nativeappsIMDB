@@ -26,7 +26,7 @@ export default {
 
 <style scoped lang="scss">
     @import '~@nativescript/theme/scss/variables/grey';
-
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css");
     // Custom styles
     .fas {
         @include colorize($color: accent);
