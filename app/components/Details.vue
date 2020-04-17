@@ -1,6 +1,8 @@
+<!-- Page to see a movie with the objectt from master page-->
 <template>
 	<Page class="page">
 		<ActionBar :title="selected.name"></ActionBar>
+		<!-- Display item information -->
 		<StackLayout col="1" class="p-20">
 			<Label class="h1 m-b-10" :text="selected.name"></Label>
 			<Image height="150" :src="selected.src" class="thumb img-circle"></Image>
@@ -14,6 +16,7 @@
 </template>
 
 <script>
+//use the props from master page call
 export default {
   props: ["selected"]
 };

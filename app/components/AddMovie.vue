@@ -24,7 +24,12 @@
         methods: {
             cancel() {
                 this.$emit("togglesearch");
-                console.log("CLICK");
+                console.log("cancel adding movie");
+            },
+            valid() {
+                //add textfield from 
+                //add item to array
+                console.log("Valide adding movie");
             }
         }
     };
