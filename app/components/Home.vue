@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    @import '~@nativescript/theme/scss/variables/blue';
+    @import '~@nativescript/theme/scss/variables/grey';
 
     // Custom styles
     .fas {

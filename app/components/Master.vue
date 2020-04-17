@@ -1,6 +1,6 @@
 <template>
 	<Page class="page">
-		<ActionBar title="Top 100 IMDB"></ActionBar>
+		<ActionBar title="Top 100 IMDB V0.4"></ActionBar>
  
 		<GridLayout :columns="isTablet ? '*, 2*' : '*'">
 			<GridLayout col="0" class="left-column">
