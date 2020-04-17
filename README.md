@@ -10,6 +10,6 @@ Based on TJ VanToll submission on nativescript.org sample library (Non commercia
 ##
 Format: ![sc_menu](https://github.com/cxsaw/nativeappsIMDB/blob/master/screenshots/Screenshot_2020-04-17-16-35-51-879_com.miui.home.jpg)
 ##
-Format: ![sc_master](https://github.com/cxsaw/nativeappsIMDB/blob/master/screenshots/Screenshot_2020-04-17-16-35-51-879_com.miui.home.jpg)
+Format: ![sc_master](https://github.com/cxsaw/nativeappsIMDB/blob/master/screenshots/Screenshot_2020-04-17-16-37-59-374_org.nativescript.TD1Mobiles.jpg)
 ##
 Format: ![sc_details](https://github.com/cxsaw/nativeappsIMDB/blob/master/screenshots/Screenshot_2020-04-17-16-38-35-965_org.nativescript.TD1Mobiles.jpg)
